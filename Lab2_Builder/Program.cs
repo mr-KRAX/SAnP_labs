@@ -41,6 +41,10 @@ namespace Lab2_Builder {
 
     public void TakeOff() {
       Console.WriteLine($"Initiate the Trip#{num}.");
+      if (driver == null) {
+        Console.WriteLine("Driver is apsenеt! Diparture is abolished!");
+        return;
+      }
       foreach (var p in passengers) {
         p.PayForTicket();
       }
